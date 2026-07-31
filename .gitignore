@@ -1,0 +1,21 @@
+# Archivos de trabajo que no forman parte del sitio publicado
+_audit.html
+_dbg.html
+_r.html
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Derivados que quedaron sin uso en la página (los originales viven en ../fotos-web)
+img/galpon-exterior-parque-maquinas.jpg
+img/thumb/galpon-exterior-parque-maquinas.jpg
+img/marca/logo-hidagroseed.png
+img/thumb/cebolla-flor-umbela-abeja-polinizacion.jpg
+img/thumb/cultivo-atardecer-precordillera.jpg
+img/thumb/cultivo-cebolla-lineas-siembra.jpg
+img/thumb/lote-cultivo-lineas-sierra-san-juan.jpg
+img/thumb/planta-acondicionado-zaranda-semilla.jpg
+img/thumb/planta-acondicionamiento-semillas.jpg
+img/thumb/tractores-galpon-maquinaria.jpg
+img/thumb/vista-aerea-finca-energia-solar-cultivos.jpg
+img/thumb/vista-aerea-parcelas-semilleros-paneles-solares.jpg
