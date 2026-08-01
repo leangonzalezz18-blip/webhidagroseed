@@ -14,7 +14,10 @@ Una página estática de una sola vista, sin dependencias ni proceso de compilac
 index.html    la página completa (HTML + CSS + JS)
 img/          fotografías, miniaturas, logotipos y pósters de video
 video/        clips de campo y planta
+fonts/        tipografías incrustadas
 ```
+
+**El sitio no carga ningún recurso externo.** Las tipografías están incluidas en `fonts/`, así que se ve exactamente igual siempre, sin depender de Google Fonts ni de que el visitante tenga conexión a servicios de terceros.
 
 ## Cómo verla
 
@@ -38,7 +41,7 @@ Es un sitio estático: no necesita base de datos ni servidor de aplicaciones.
 - Navegación con menú desplegable por debajo de 1180 px.
 - Todas las fotografías se amplían al hacer clic, con teclado y deslizamiento táctil.
 - Respeta `prefers-reduced-motion`; si el JavaScript no carga, el contenido se muestra igual.
-- Tipografías: Manrope y Fraunces (Google Fonts), con alternativas del sistema.
+- Tipografías Manrope y Fraunces incrustadas (variables, subconjuntos latin y latin-ext), bajo SIL Open Font License 1.1.
 
 | | |
 |---|---|
