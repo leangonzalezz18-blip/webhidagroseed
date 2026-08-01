@@ -2,7 +2,7 @@
 
 Sitio institucional de **HidAgroSeed**, productora de semillas hortícolas de San Juan, Argentina.
 
-🌐 **hidagroseedar@gmail.com** · WhatsApp **+54 9 2645 614925** · [@hidagroseed\_](https://www.instagram.com/hidagroseed_/)
+🌐 **[hidagroseed.netlify.app](https://hidagroseed.netlify.app)** · **hidagroseedar@gmail.com** · WhatsApp **+54 9 2645 614925** · [@hidagroseed\_](https://www.instagram.com/hidagroseed_/)
 
 ---
 
@@ -29,11 +29,11 @@ npx serve .
 
 ## Cómo publicarla
 
-Es un sitio estático: no necesita base de datos ni servidor de aplicaciones.
+El sitio está publicado en **Netlify**, conectado a este repositorio: cada `push` a la rama `main` se despliega solo en [hidagroseed.netlify.app](https://hidagroseed.netlify.app). No hay compilación — *build command* vacío y directorio de publicación la raíz.
 
-- **GitHub Pages** — en *Settings → Pages*, elegir la rama `main` y la carpeta raíz.
-- **Netlify** — arrastrar la carpeta a [app.netlify.com/drop](https://app.netlify.com/drop).
-- **Hosting tradicional** — subir el contenido por FTP a `public_html`.
+Es un sitio estático, así que también funciona en cualquier otro lado sin cambios: GitHub Pages (*Settings → Pages*, rama `main`, carpeta raíz) o un hosting tradicional por FTP a `public_html`.
+
+Si algún día se cambia el dominio, hay que actualizar la dirección en las etiquetas `canonical`, `og:url` y `og:image` del `<head>` de `index.html`, que están escritas completas para que funcione la vista previa al compartir el enlace.
 
 ## Detalles técnicos
 
