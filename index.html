@@ -398,6 +398,24 @@ body.is-locked{overflow:hidden}
 .vent__c--hl p{color:rgba(255,255,255,.75)}
 @media (max-width:860px){.vent{grid-template-columns:1fr}}
 
+/* ---------- aviso: trabajo a pedido ---------- */
+.pedido{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(1rem,2.5vw,1.6rem);align-items:start;
+  margin-bottom:clamp(2rem,4vw,2.8rem);
+  background:var(--blanco);border:1px solid var(--linea);
+  border-left:4px solid var(--verde);
+  border-radius:var(--r-lg);padding:clamp(1.4rem,3vw,2rem) clamp(1.4rem,3vw,2.2rem);
+}
+.pedido__ic{
+  width:42px;height:42px;border-radius:50%;flex:none;
+  display:grid;place-items:center;
+  background:rgba(3,173,41,.12);border:1px solid rgba(3,173,41,.35);
+}
+.pedido__ic svg{width:21px;height:21px;fill:var(--verde-700)}
+.pedido h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+.pedido p{font-size:.95rem;color:var(--gris);line-height:1.7;max-width:78ch}
+@media (max-width:620px){.pedido{grid-template-columns:1fr}}
+
 .consul{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:center;margin-top:clamp(2.5rem,5vw,3.5rem);background:var(--blanco);border:1px solid var(--linea);border-radius:var(--r-lg);padding:clamp(1.8rem,4vw,3rem)}
 .ticks{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.2rem;margin:1.2rem 0 1.4rem}
 .ticks li{position:relative;padding-left:1.7rem;font-size:.93rem;color:var(--gris)}
@@ -643,6 +661,42 @@ body.is-locked{overflow:hidden}
   .sellos li{flex-direction:row;text-align:left;padding:1rem 1.1rem;gap:.9rem}
   .sello__ic{width:32px;height:32px}
   .sello__ic svg{width:17px;height:17px}
+}
+
+/* ---------- registro nacional ---------- */
+.reg{
+  display:grid;grid-template-columns:auto 1fr auto;
+  gap:clamp(1.1rem,2.5vw,1.8rem);align-items:center;
+  margin-top:clamp(2.5rem,5vw,3.5rem);
+  padding:clamp(1.5rem,3vw,2.1rem) clamp(1.5rem,3vw,2.3rem);
+  border-radius:var(--r-lg);
+  background:rgba(3,173,41,.07);
+  border:1px solid rgba(3,173,41,.35);
+}
+.reg__ic{
+  width:46px;height:46px;border-radius:50%;flex:none;
+  display:grid;place-items:center;
+  background:var(--verde);box-shadow:0 6px 18px rgba(3,173,41,.35);
+}
+.reg__ic svg{width:23px;height:23px;fill:#fff}
+.reg h3{font-size:1.1rem;color:#fff;font-weight:700;line-height:1.3;margin-bottom:.4rem}
+.reg p{font-size:.9rem;color:rgba(255,255,255,.68);line-height:1.6;max-width:60ch}
+.reg__n{
+  text-align:right;padding-left:clamp(1.1rem,2.5vw,1.8rem);
+  border-left:1px solid rgba(255,255,255,.15);
+}
+.reg__lb{
+  display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);margin-bottom:.35rem;font-weight:600;
+}
+.reg__n strong{
+  font-size:clamp(1.4rem,2.6vw,1.85rem);color:#5FE07E;
+  font-weight:800;letter-spacing:-.01em;white-space:nowrap;
+}
+@media (max-width:860px){
+  .reg{grid-template-columns:auto 1fr;text-align:left}
+  .reg__n{grid-column:1 / -1;text-align:left;padding-left:0;padding-top:1.1rem;
+    border-left:0;border-top:1px solid rgba(255,255,255,.15)}
 }
 
 /* ---------- filosofía ---------- */
@@ -1049,8 +1103,8 @@ body.is-locked{overflow:hidden}
       <ol class="pilares">
         <li class="pilar reveal">
           <span class="pilar__n">01</span>
-          <h3>Galpón habilitado por SENASA</h3>
-          <p>Nuestro galpón está habilitado y aprobado por SENASA. Contamos además con todas las habilitaciones y aprobaciones necesarias para desarrollar la actividad con respaldo formal y sin zonas grises.</p>
+          <h3>Galpón habilitado e inscripto</h3>
+          <p>Nuestro galpón está habilitado y aprobado por SENASA, y se encuentra inscripto en el Registro Nacional de Comercio y Fiscalización de Semillas. Contamos además con todas las habilitaciones y aprobaciones necesarias para desarrollar la actividad con respaldo formal y sin zonas grises.</p>
         </li>
         <li class="pilar reveal">
           <span class="pilar__n">02</span>
@@ -1063,6 +1117,18 @@ body.is-locked{overflow:hidden}
           <p>Cada lote atraviesa un proceso riguroso de selección, acondicionamiento y control antes de salir. Ninguno se despacha sin haber pasado por todas las instancias.</p>
         </li>
       </ol>
+    </div>
+
+    <div class="reg reveal">
+      <span class="reg__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v2H8v-2zm0 4h8v2H8v-2zm0-8h3v2H8V9z"/></svg></span>
+      <div>
+        <h3>Registro Nacional de Comercio y Fiscalización de Semillas</h3>
+        <p>El galpón se encuentra inscripto en el Registro Nacional de Comercio y Fiscalización de Semillas, lo que respalda formalmente la actividad de acondicionamiento y comercialización de semilla.</p>
+      </div>
+      <div class="reg__n">
+        <span class="reg__lb">N.º de inscripción y categorías</span>
+        <strong>7343/EG</strong>
+      </div>
     </div>
 
     <ul class="sellos reveal">
@@ -1109,9 +1175,16 @@ body.is-locked{overflow:hidden}
     <div class="sec__head sec__head--center reveal">
       <p class="eyebrow">Comercialización</p>
       <h2 class="h2">Venta minorista y mayorista</h2>
-      <p class="lead">HidAgroSeed comercializa semilla hortícola tanto en compras de bajo volumen como en operaciones por mayor, con envíos a distintos puntos de Argentina.</p>
+      <p class="lead">HidAgroSeed comercializa semilla hortícola tanto en compras de bajo volumen como en operaciones por mayor, con envíos a distintos puntos de Argentina. Trabajamos por pedido: la semilla se prepara y se entrega según lo que cada cliente necesita.</p>
     </div>
 
+    <div class="pedido reveal">
+      <span class="pedido__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM1 2h3.3l.9 3H22l-3 9H7.5l-.5 1.6c-.1.3.1.4.4.4H20v2H7.1c-1.6 0-2.6-1.5-2.1-3l.7-2.2L3 4H1V2z"/></svg></span>
+      <div>
+        <h3>Trabajamos con pedidos, no con stock</h3>
+        <p>No mantenemos semilla en stock permanente. Cada operación se coordina previamente: se acuerda la especie, la variedad y la cantidad, y a partir de ahí se prepara el lote. Por eso conviene consultar con anticipación, para confirmar disponibilidad y plazos de entrega según la campaña.</p>
+      </div>
+    </div>
 
     <div class="vent reveal">
       <article class="vent__c">
@@ -1135,11 +1208,12 @@ body.is-locked{overflow:hidden}
           <li>Disponibilidad y variedades</li>
           <li>Cantidades y volúmenes</li>
           <li>Modalidades de compra</li>
+          <li>Plazos de entrega del pedido</li>
           <li>Ventas mayoristas</li>
           <li>Envíos y logística</li>
           <li>Condiciones comerciales</li>
         </ul>
-        <p class="note">La disponibilidad y los precios se informan por consulta directa, ya que varían según la especie, el volumen y la campaña.</p>
+        <p class="note">Trabajamos por pedido, sin stock permanente. La disponibilidad y los precios se informan por consulta directa, ya que varían según la especie, el volumen y la campaña.</p>
       </div>
       <div class="consul__r">
         <a class="btn btn--wa btn--lg" href="https://wa.me/5492645614925?text=Hola%20HidAgroSeed%2C%20quisiera%20consultar%20disponibilidad%20y%20precios%20de%20semillas." target="_blank" rel="noopener">
